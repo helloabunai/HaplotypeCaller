@@ -24,15 +24,36 @@ class IndividualSNP:
 	def __init__(self):
 		self.SNPID = ''
 		self.present_haplotypes = []
+		self.present_calls = []
+		self.haplotype_conditions = []
 		self.haplotype_frequency = []
+		self.call_frequency = []
+		self.normal_frequency = []
+		self.normal_calls = []
+		self.expanded_frequency = []
+		self.expanded_calls = []
 
 	## setters
 	def set_SNPID(self, value):
 		self.SNPID = value
 	def append_haplotype(self, value):
 		self.present_haplotypes.append(value)
+	def append_call(self, value):
+		self.present_calls.append(value)
+	def append_condition(self, value):
+		self.haplotype_conditions.append(value)
 	def set_frequency(self, value):
 		self.haplotype_frequency = value
+	def set_callfreq(self, value):
+		self.call_frequency = value
+	def set_normalfreq(self, value):
+		self.normal_frequency = value
+	def set_normalcalls(self, value):
+		self.normal_calls = (value)
+	def set_expandedfreq(self, value):
+		self.expanded_frequency = value
+	def set_expandedcalls(self, value):
+		self.expanded_calls = (value)
 
 
 	## getters
@@ -40,8 +61,22 @@ class IndividualSNP:
 		return self.SNPID
 	def get_haplotypes(self):
 		return self.present_haplotypes
+	def get_calls(self):
+		return self.present_calls
+	def get_conditions(self):
+		return self.haplotype_conditions
 	def get_frequency(self):
 		return self.haplotype_frequency
+	def get_callfreq(self):
+		return self.call_frequency
+	def get_normalfreq(self):
+		return self.normal_frequency
+	def get_normalcalls(self):
+		return self.normal_calls
+	def get_expandedfreq(self):
+		return self.expanded_frequency
+	def get_expandedcalls(self):
+		return self.expanded_calls
 
 class IndividualSubject:
 	def __init__(self):
